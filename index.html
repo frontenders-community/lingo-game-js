@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lingo Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="main()">
+  <div id="app">
+    <img class="logo" src="/images/logo.png" alt="Logo Lingo">
+    <div class="user-input">
+      <input type="text" id="word-input" value="">
+      <button id="guess-btn"><img src="images/pencil.png" alt="Gioca"></button>
+    </div>
+
+    <div id="board" class="board"></div>
+    <div id="timer" class="timer">
+      <div id="countdown" class="countdown"></div>
+    </div>
+    <button id="next-btn" class="next-btn">Prossimo lingo</button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

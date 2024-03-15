@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cornflowerblue;
+}
+
+:root {
+  --cell-empty: #0e48d5;
+  --cell-text: #fafeff;
+  --cell-correct: #05a32a;
+  --cell-wrong: #c28709;
+  --cell-error: #8d0c12;
+}
+
+#app {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+
+  .logo {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+}
+
+
+.user-input  {
+  margin: 20px 0;
+  position: relative;
+
+  input {
+    padding: 12px 24px;
+    height: 60px;
+    font-size: 2rem;
+    border: 2px solid var(--cell-empty);
+    border-radius: 4px;
+  }
+
+  button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--cell-empty);
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+
+    img {
+      width: 20px;
+    }
+  }
+}
+
+.board {
+  .row {
+    display: flex;
+    margin: 8px 0;
+
+    .square {
+      margin: 0 4px;
+      padding: 8px 24px;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      background-color: var(--cell-empty);
+      color: var(--cell-text);
+      text-transform: uppercase;
+      border: 2px solid #fff;
+      border-radius: 4px;
+
+      &.empty {
+        background-color: var(--cell-empty);
+      }
+
+      &.correct {
+        background-color: var(--cell-correct);
+      }
+
+      &.wrong {
+        background-color: var(--cell-wrong);
+      }
+
+      &.error {
+        background-color: var(--cell-error);
+      }
+    }
+  }
+}
+
+.next-btn {
+  display: none;
+  margin: 10px 0;
+  padding: 12px 24px;
+  background-color: var(--cell-empty);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fff;
+    color: var(--cell-empty);
+    transition: .5s;
+  }
+}
+
+.timer {
+  margin-top: 10px;
+  width: 304px;
+  height: 20px;
+  border: 2px solid #fff;
+
+  .countdown {
+    width: 100%;
+    height: 16px;
+    background-color: var(--cell-empty);
+    transition: .2s;
+  }
+}
